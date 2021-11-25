@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script>
+      window.ga =
+        window.ga ||
+        function () {
+          (ga.q = ga.q || []).push(arguments);
+        };
+      ga.l = +new Date();
+      ga("create", "UA-194308997-1", {
+        storage: "none",
+      });
+      ga("send", "pageview");
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>
+      Third of The Night - Calculate the last third of the night, tahajjud
+      calculator, qiyam al layl calculator.
+    </title>
+    <meta
+      name="description"
+      content="Calculate the last third of the night by entering the time for Maghrib and Fajr. One of the easiest ways if you want to pray tahajjud or qiyam al layl or want to make dua in the last third of the night."
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="input">
+        <h2 class="maghribtext">Night starts at </h2>
+        <input
+          class="maghribinput"
+          type="time"
+          id="maghrib"
+          name="maghrib"
+          required
+        />
+        <h2 class="fajrtext">Morning starts at </h2>
+        <input class="fajrinput" type="time" id="fajr" name="fajr" required />
+        <input
+          class="calculate"
+          id="calculate"
+          type="button"
+          value="Calculate"
+        />
+      </div>
+      <div class="results" id="results">
+        <h2 class="thirdtext">Last ⅓ of night starts at</h2>
+        <p class="third" id="third">0</p>
+        <h2 class="midnighttext">Midnight starts at</h2>
+        <p class="midnight" id="midnight"></p>
+        <button class="disclaimer" id="disclaimer">DISCLAIMER (MUST READ)</button>
+        </button>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>ٱلسَّلَامُ عَلَيْكُمْ</h1>
+      <p>
+        The calculated times displayed above are accurate to the nearest minute. 
+        In your case, this means if you pray or make dua at least 1 minute after <span class="userthird"></span>,
+        this means you have definitely prayed or made dua in the last third of the night. 
+        Click <a href="https://islamqa.info/en/answers/291824/the-virtue-of-offering-supplication-in-the-last-third-of-the-night">here</a> 
+        to understand why the last third of the night is a special time for Muslims. As for the midnight value given to you 
+        (<span class="usermidnight"></span>), this is for those who believe the ‘Isha prayer must be performed before midnight. 
+        This is also accurate to the nearest minute, so this could mean midnight is actually 1 minute earlier than the value given to you. 
+        I must remind you that the calculator depends on you giving accurate times for the start of the night and start of the day, so you must ensure they are correct. 
+        below are a few more refrences to when the night the night starts and the importance of the 3rd half of the night.
+        Click <a href="https://hadithoftheday.com/when-exactly-is-the-last-third-of-the-night">here</a> 
+        Click <a href="https://www.ummah.com/forum/forum/islam/general-islamic-topics/472926-how-to-calculate-the-precise-one-third-end-of-the-night">here</a> 
+        Click <a href="https://www.havehalalwilltravel.com/guide-qiyam-al-layl-what-how-to-do">here for more information on the third half of the night</a>
+        A huge thanks to  Ahmed Samadzadeh  for helping out with the logic of the code جزاكلله خير .
+ 
+        	
+      </p>
+    </div>
+  <p>
+    <center> Bleeeeek asks for his remembrance in your dua جزاكلله خير .</center>
+  </p>
+    <div class="overlay hidden">
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
